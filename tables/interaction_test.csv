@@ -1,0 +1,3 @@
+outcome,term,coefficient,std_error,p_value,significant_at_5pct,n
+Prestige,connection x idea interaction,-0.0074,0.0058,0.2034,no (additive),5848
+Top-5,connection x idea interaction,0.0073,0.0046,0.1109,no (additive),5848

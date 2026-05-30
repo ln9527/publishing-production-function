@@ -1,0 +1,6 @@
+input,Idea quality (discipline-trained),Off-the-shelf LLM text score,Execution quality,Connection index,Author ability index
+Idea quality (discipline-trained),1.0,0.441,0.358,0.061,0.042
+Off-the-shelf LLM text score,0.441,1.0,0.107,0.081,0.031
+Execution quality,0.358,0.107,1.0,0.064,-0.134
+Connection index,0.061,0.081,0.064,1.0,0.155
+Author ability index,0.042,0.031,-0.134,0.155,1.0

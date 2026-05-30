@@ -1,0 +1,8 @@
+variable,n,mean,sd,min,median,max
+Idea quality (discipline-trained),5848,3.039,0.558,1.005,3.145,3.979
+Off-the-shelf LLM text score,5848,2.346,0.318,1.25,2.2,3.81
+Execution quality,5848,3.711,0.81,1.15,3.85,5.0
+Connection index,5848,0.0,0.325,-1.186,-0.003,1.663
+Author ability index,5848,-0.0,1.384,-4.863,-0.369,15.037
+Team size,5848,2.501,1.031,1.0,2.0,10.0
+Placement rung (0-4),5848,1.784,1.455,0.0,2.0,4.0

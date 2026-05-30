@@ -1,0 +1,11 @@
+predictor,compact_index_specification,multi_indicator_benchmark
+Execution quality,+0.1483*** (0.0068),+0.1249*** (0.0071)
+Idea quality (discipline-trained),+0.0695*** (0.0070),+0.0489*** (0.0071)
+Off-the-shelf LLM text score,+0.0471*** (0.0069),+0.0377*** (0.0068)
+Connection index,+0.0201*** (0.0067),(see indicators)
+Author ability index,-0.0015 (0.0075),(see indicators)
+Acknowledged editors (benchmark indicator),(in connection index),+0.0511*** (0.0069)
+Connection / ability indicators,single index each,all indicators included
+"Team size, field FE, issue-year FE",included,included
+N,5848,5848
+R-squared,0.1746,0.2062

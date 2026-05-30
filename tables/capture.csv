@@ -1,0 +1,5 @@
+connection_tier,n,mean_idea_quality,mean_offshelf_llm_score,mean_execution_quality,top5_rate_pct,prestige_rate_pct
+none,2895,2.889,2.288,3.5,6.4,27.6
+low,984,3.188,2.39,3.911,17.5,49.7
+mid,984,3.145,2.385,3.918,16.9,50.2
+high,985,3.224,2.436,3.927,26.1,55.0

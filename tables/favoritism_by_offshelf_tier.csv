@@ -1,0 +1,4 @@
+offshelf_tier,none_top5_rate_pct,none_n,low_top5_rate_pct,low_n,mid_top5_rate_pct,mid_n,high_top5_rate_pct,high_n,high_over_none_ratio
+low,3.7,1582,9.6,387,7.9,405,16.7,365,4.6
+mid,6.5,647,12.2,238,14.2,218,19.6,184,3.0
+high,12.9,666,29.5,359,28.5,361,36.7,436,2.8

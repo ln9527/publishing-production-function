@@ -1,0 +1,26 @@
+placement_margin,input_block,shapley_r_squared,share_of_explained_variance,block_r_squared
+Any publication,Execution,0.0347,61.5,0.0563
+Any publication,Connections,0.0086,15.3,0.0563
+Any publication,Idea quality,0.0053,9.5,0.0563
+Any publication,Author ability,0.0065,11.5,0.0563
+Any publication,LLM text score,0.0013,2.2,0.0563
+Mid or better,Execution,0.0654,50.0,0.1308
+Mid or better,Connections,0.0245,18.7,0.1308
+Mid or better,Idea quality,0.0205,15.7,0.1308
+Mid or better,Author ability,0.0153,11.7,0.1308
+Mid or better,LLM text score,0.0051,3.9,0.1308
+Top-field,Execution,0.0306,52.6,0.0581
+Top-field,Connections,0.0112,19.2,0.0581
+Top-field,Idea quality,0.0072,12.3,0.0581
+Top-field,Author ability,0.0086,14.8,0.0581
+Top-field,LLM text score,0.0006,1.1,0.0581
+Prestige,Execution,0.073,37.3,0.1959
+Prestige,Connections,0.0475,24.2,0.1959
+Prestige,Idea quality,0.0321,16.4,0.1959
+Prestige,Author ability,0.0272,13.9,0.1959
+Prestige,LLM text score,0.0161,8.2,0.1959
+Top-5,Execution,0.027,15.6,0.1732
+Top-5,Connections,0.0672,38.8,0.1732
+Top-5,Idea quality,0.0226,13.1,0.1732
+Top-5,Author ability,0.0323,18.7,0.1732
+Top-5,LLM text score,0.024,13.9,0.1732
