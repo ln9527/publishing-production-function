@@ -22,8 +22,8 @@ STEPS = [
     "03_factor_shares.py",
     "04_dual_channel.py",
     "05_apex_friction.py",
-    "07_measurement_calibration.py",
-    "06_make_figures.py",
+    "06_measurement_calibration.py",
+    "07_make_figures.py",
 ]
 
 

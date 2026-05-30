@@ -26,7 +26,7 @@ two-channel analysis.
 |---|---|---|
 | `paper_id` | text | Public NBER working-paper id (for example `w15630`). |
 | `issue_year` | integer | Calendar year the working paper was issued (2010-2015). |
-| `field_jel` | text | Primary field, given by the first letter of the paper's JEL classification (for example `D`, `E`, `G`). Used as a field fixed effect. |
+| `field_jel` | text | Primary field, given by the first letter of the paper's JEL classification (for example `D`, `E`, `G`). `UNK` marks the few papers with no usable JEL code, and rare field letters are grouped as an "other" category. Used as a field fixed effect. |
 | `team_size` | integer | Number of authors on the paper. |
 | `author_cluster_id` | integer | De-identified code for the paper's primary author. Papers by the same primary author share a code. Used to cluster standard errors. No link to any name or external id. |
 

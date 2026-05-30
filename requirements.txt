@@ -1,6 +1,6 @@
 # Python package requirements for the reproduction scripts.
-# Verified with Python 3.10+ and the versions pinned below; nearby versions
-# should also work.
+# Verified with Python 3.10+; the entries below are minimum versions, and
+# nearby versions should also work.
 pandas>=2.0
 numpy>=1.24
 statsmodels>=0.14

@@ -16,8 +16,8 @@ fixed *before* publication and independent of who wrote it.
 
 This paper uses a name-blind, pre-publication evaluator that scores a paper's
 idea from its text alone. With that score in hand, it estimates a five-input
-production function for journal placement across 6,208 NBER economics working
-papers (2010-2015). The five inputs are:
+production function for journal placement on 5,848 papers with complete inputs,
+drawn from a scored cohort of 6,208 NBER economics working papers (2010-2015). The five inputs are:
 
 1. **Idea quality** — a discipline-trained text score.
 2. **Off-the-shelf LLM text score** — the same idea, rated by a general
@@ -60,8 +60,8 @@ code/
   03_factor_shares.py          variance decomposition across placement margins
   04_dual_channel.py           capture + favoritism + the additivity test
   05_apex_friction.py          placement by idea-quality percentile
-  07_measurement_calibration.py idea score vs realized placement
-  06_make_figures.py           the four main figures
+  06_measurement_calibration.py idea score vs realized placement
+  07_make_figures.py            the four main figures
   run_all.py                   runs every step in order
 tables/                        generated CSV tables
 figures/                       generated PNG figures
@@ -80,9 +80,11 @@ python3 run_all.py
 
 (Use `python3`, or `python` if that name points to your Python 3.10+ install.)
 
-`run_all.py` runs the seven scripts in order and stops if any step fails. Each
-script also runs on its own (for example `python3 02_production_function.py`).
-Every script reads only from `data/` and writes to `tables/` or `figures/`.
+`run_all.py` runs the seven scripts in order and stops if any step fails. Scripts
+01-06 each run on their own (for example `python3 02_production_function.py`);
+`07_make_figures.py` reads the tables the earlier steps produce, so run those first
+(or just use `run_all.py`). Every script reads only from `data/` and writes to
+`tables/` or `figures/`.
 
 ## What each script produces
 
@@ -93,8 +95,8 @@ Every script reads only from `data/` and writes to `tables/` or `figures/`.
 | `03_factor_shares.py` | `tables/factor_shares_by_margin.csv` |
 | `04_dual_channel.py` | `tables/capture.csv`, `tables/favoritism_by_idea_tier.csv`, `tables/favoritism_by_offshelf_tier.csv`, `tables/interaction_test.csv` |
 | `05_apex_friction.py` | `tables/placement_by_idea_percentile.csv` |
-| `07_measurement_calibration.py` | `tables/measurement_calibration.csv` |
-| `06_make_figures.py` | `figures/figure1_production_function.png` ... `figure4_apex_friction.png` |
+| `06_measurement_calibration.py` | `tables/measurement_calibration.csv` |
+| `07_make_figures.py` | `figures/figure1_production_function.png` ... `figure4_apex_friction.png` |
 
 ## Methods, briefly
 
@@ -179,7 +181,7 @@ Both are working papers; venue and year are provisional.
 }
 
 @unpublished{idea_quality_evaluator,
-  author = {Gong, ... and Li, Ning and Zhou, ...},
+  author = {Gong, Zhen and Li, Ning and Zhou, Haoran},
   title  = {A discipline-trained evaluator of economics research ideas},
   note   = {Working paper},
   year   = {2026}
