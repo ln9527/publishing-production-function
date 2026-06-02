@@ -9,5 +9,8 @@ row is keyed by a public working-paper identifier and the measures are derived
 from public sources — the National Bureau of Economic Research, OpenAlex,
 Crossref, Semantic Scholar, and the published editorial boards of economics
 journals — the identifying layer can be rebuilt independently from those
-sources. The repository is private pending publication and will be made public
-on acceptance.
+sources. The network, prestige, and ability features can likewise be re-derived
+from those public records; the three text scores (idea quality, the off-the-shelf
+score, and execution) require the discipline-trained evaluator and a specific
+off-the-shelf language model, and are provided here. The replication package is
+publicly available at https://github.com/ln9527/publishing-production-function.

@@ -1,6 +1,8 @@
 # Python package requirements for the reproduction scripts.
 # Verified with Python 3.10+; the entries below are minimum versions, and
-# nearby versions should also work.
+# nearby versions should also work. The shipped tables were last regenerated
+# byte-for-byte with Python 3.14, pandas 2.3.3, numpy 2.3.4, statsmodels 0.14.6,
+# matplotlib 3.10.8.
 pandas>=2.0
 numpy>=1.24
 statsmodels>=0.14

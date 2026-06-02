@@ -31,8 +31,10 @@ drawn from a scored cohort of 6,208 NBER economics working papers (2010-2015). T
 
 - **The idea score tracks where papers land.** Papers that reached a Top-5
   journal were rated exceptional 53.3% of the time and strong-or-exceptional
-  94.1% of the time, versus 23.6% exceptional among unmatched papers — a
-  monotonic gradient that validates the measure.
+  94.1% of the time, versus 23.6% exceptional among unmatched papers — a steep
+  gradient at the apex. The gradient is not monotonic across every rung
+  (unmatched papers out-score the lower- and mid-tier published ones), which is
+  the apex-friction pattern below: strong ideas often go unplaced.
 - **Execution is the largest input.** It accounts for 37.3% of the explained
   variance in prestige placement and sets a meritocratic floor.
 - **Connections concentrate at the very top.** Their share of explained variance
@@ -158,7 +160,11 @@ Author and editor identities are withheld for privacy: the public files carry no
 author names, author identifiers, paper titles, editor names, or journal
 identities. Because every row is keyed by the public NBER working-paper id and
 all upstream sources above are public, a reader can rebuild the identifying
-layer independently from those sources and re-derive the features.
+layer independently from those sources. The connection, prestige, and ability
+features can likewise be re-derived from those public records; the three text
+scores (idea quality, the off-the-shelf score, and execution) instead require
+the discipline-trained evaluator and a specific off-the-shelf language model,
+so they are provided here rather than re-derivable from public sources alone.
 
 ## Privacy
 

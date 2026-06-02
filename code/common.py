@@ -74,14 +74,14 @@ BINARY_COLS = {
 def load_analysis_sample() -> pd.DataFrame:
     """The five-input analytical sample (complete cases on the five inputs)."""
     if not ANALYSIS_SAMPLE.exists():
-        raise SystemExit(f"missing {ANALYSIS_SAMPLE}")
+        raise SystemExit(f"missing data/{ANALYSIS_SAMPLE.name} (run from the repo; check the shipped data files)")
     return pd.read_csv(ANALYSIS_SAMPLE)
 
 
 def load_calibration_sample() -> pd.DataFrame:
     """The full scored cohort used for calibration and the percentile cuts."""
     if not CALIBRATION_SAMPLE.exists():
-        raise SystemExit(f"missing {CALIBRATION_SAMPLE}")
+        raise SystemExit(f"missing data/{CALIBRATION_SAMPLE.name} (run from the repo; check the shipped data files)")
     return pd.read_csv(CALIBRATION_SAMPLE)
 
 

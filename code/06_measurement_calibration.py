@@ -4,12 +4,14 @@ This is the measurement-validation exhibit. For each realized placement tier, we
 report how the pre-publication idea evaluator rated those papers: the share
 called exceptional, the share called strong or better, the share called limited,
 and the mean idea score. If the score is meaningful, higher placement tiers
-should carry higher idea ratings, monotonically.
+should carry higher idea ratings, and they do at the top of the ladder.
 
-They do. Papers that reached a Top-5 journal were rated exceptional 53.3% of the
+Papers that reached a Top-5 journal were rated exceptional 53.3% of the
 time and strong-or-exceptional 94.1% of the time, with a mean idea score of
 3.361; unmatched papers were rated exceptional only 23.6% of the time. The
-gradient is monotonic in the score and steep at the top.
+gradient is steep at the apex but not monotonic across every rung: unmatched
+papers out-score the lower- and mid-tier published ones, the apex-friction
+pattern in which strong ideas often go unplaced.
 
 This runs on the full scored cohort (every paper that received an idea score),
 since calibration is about the measurement, not the regression sample.
