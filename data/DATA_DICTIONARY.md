@@ -51,38 +51,38 @@ Every feature uses only information dated before the working paper's issue date.
 
 Author-ability block (prior output and experience):
 
-| column | description |
-|---|---|
-| `team_max_prior_publications` | Most prior publications held by any author on the team. |
-| `team_mean_prior_publications` | Mean prior publications across the team. |
-| `team_max_prior_top5_publications` | Most prior Top-5-journal publications by any author. |
-| `team_sum_prior_top5_publications` | Total prior Top-5 publications across the team. |
-| `team_max_years_since_first_publication` | Longest publishing career on the team. |
-| `team_mean_years_since_first_publication` | Mean career length across the team. |
-| `author_prior_publications_total` | Primary author's total prior publications. |
-| `author_prior_publications_recent_5yr` | Primary author's prior publications in the five years before issue. |
-| `author_prior_top5_publications` | Primary author's prior Top-5 publications. |
-| `author_years_since_first_publication` | Primary author's career length at issue. |
+| column | type / range | description |
+|---|---|---|
+| `team_max_prior_publications` | integer, 1–2135 | Most prior publications held by any author on the team. |
+| `team_mean_prior_publications` | numeric, 1–1340 | Mean prior publications across the team. |
+| `team_max_prior_top5_publications` | integer, 0–75 | Most prior Top-5-journal publications by any author. |
+| `team_sum_prior_top5_publications` | integer, 0–103 | Total prior Top-5 publications across the team. |
+| `team_max_years_since_first_publication` | integer, 0–358 | Longest publishing career on the team. |
+| `team_mean_years_since_first_publication` | numeric, 0–327 | Mean career length across the team. |
+| `author_prior_publications_total` | integer, 1–2135 | Primary author's total prior publications. |
+| `author_prior_publications_recent_5yr` | integer, 0–878 | Primary author's prior publications in the five years before issue. |
+| `author_prior_top5_publications` | integer, 0–75 | Primary author's prior Top-5 publications. |
+| `author_years_since_first_publication` | integer, 0–358 | Primary author's career length at issue. |
 
 Connection block (network position, prestige, editor ties):
 
-| column | description |
-|---|---|
-| `coauthor_network_degree_max` | Largest coauthor-network degree on the team. |
-| `coauthor_network_degree_mean` | Mean coauthor-network degree across the team. |
-| `coauthor_network_centrality_max` | Largest coauthor-network eigenvector centrality. |
-| `has_star_coauthor` | 1 if any author has a highly central ("star") coauthor. |
-| `institution_prestige_best_tier` | Best (lowest-numbered) institution-prestige tier on the team; lower is more prestigious. |
-| `institution_prestige_mean_tier` | Mean institution-prestige tier across the team. |
-| `n_authors_moved_to_better_institution` | Count of authors who moved to a more prestigious institution before issue. |
-| `author_ever_editor` | 1 if any author had ever served as a journal editor by issue. |
-| `author_ever_top5_editor` | 1 if any author had ever served as a Top-5-journal editor. |
-| `editor_tenure_years_max` | Longest prior editorial tenure on the team, in years. |
-| `editor_tenure_years_sum` | Total prior editorial tenure across the team, in years. |
-| `has_editor_coauthor` | 1 if any author has a coauthor who has been an editor. |
-| `n_editor_coauthors` | Count of the team's coauthors who have been editors. |
-| `n_advisors_who_are_top5_editors` | Count of the authors' PhD advisors who are Top-5-journal editors. |
-| `acknowledged_editors` | Count of journal editors named in the paper's acknowledgments. |
+| column | type / range | description |
+|---|---|---|
+| `coauthor_network_degree_max` | integer, 0–111 | Largest coauthor-network degree on the team. |
+| `coauthor_network_degree_mean` | numeric, 0–105 | Mean coauthor-network degree across the team. |
+| `coauthor_network_centrality_max` | numeric, 0–0.19 | Largest coauthor-network eigenvector centrality. |
+| `has_star_coauthor` | 0/1 flag | 1 if any author has a highly central ("star") coauthor. |
+| `institution_prestige_best_tier` | integer, 1–3 | Best (lowest-numbered) institution-prestige tier on the team; lower is more prestigious. |
+| `institution_prestige_mean_tier` | numeric, 1–3 | Mean institution-prestige tier across the team. |
+| `n_authors_moved_to_better_institution` | integer, 0–5 | Count of authors who moved to a more prestigious institution before issue. |
+| `author_ever_editor` | 0/1 flag | 1 if any author had ever served as a journal editor by issue. |
+| `author_ever_top5_editor` | 0/1 flag | 1 if any author had ever served as a Top-5-journal editor. |
+| `editor_tenure_years_max` | integer, 0–10 | Longest prior editorial tenure on the team, in years. |
+| `editor_tenure_years_sum` | integer, 0–14 | Total prior editorial tenure across the team, in years. |
+| `has_editor_coauthor` | 0/1 flag | 1 if any author has a coauthor who has been an editor. |
+| `n_editor_coauthors` | integer, 0–76 | Count of the team's coauthors who have been editors. |
+| `n_advisors_who_are_top5_editors` | integer, 0–4 | Count of the authors' PhD advisors who are Top-5-journal editors. |
+| `acknowledged_editors` | integer, 0–15 | Count of journal editors named in the paper's acknowledgments. |
 
 ### Outcomes
 

@@ -77,7 +77,8 @@ def capture_table(df: pd.DataFrame) -> pd.DataFrame:
 def favoritism_table(df: pd.DataFrame, row_col: str, row_levels: list[str]
                      ) -> pd.DataFrame:
     """Within each row level (an idea tier or off-the-shelf tier), the Top-5
-    placement rate across connection tiers."""
+    placement rate across connection tiers. The high_over_none_ratio is left
+    blank when the 'none'-connection base rate is zero (small tiers)."""
     rows = []
     for level in row_levels:
         sub = df[df[row_col] == level]
@@ -125,30 +126,25 @@ def interaction_test(df: pd.DataFrame) -> pd.DataFrame:
     for outcome, outcome_label in [("prestige", "Prestige"),
                                    ("reached_top5", "Top-5")]:
         y = d[outcome].astype(float).reset_index(drop=True)
-        for spec, cols in [("main effects only", main_cols),
-                           ("with connection x idea",
-                            main_cols + ["connection_x_idea"])]:
-            X = pd.concat([
-                d[cols].astype(float).reset_index(drop=True), fe], axis=1)
-            Xc = sm.add_constant(X, has_constant="add")
-            res = sm.OLS(y, Xc.astype(float)).fit(
-                cov_type="cluster",
-                cov_kwds={"groups":
-                          d["author_cluster_id"].reset_index(drop=True)})
-            if "connection_x_idea" not in cols:
-                continue
-            b = res.params["connection_x_idea"]
-            se = res.bse["connection_x_idea"]
-            p = res.pvalues["connection_x_idea"]
-            rows.append({
-                "outcome": outcome_label,
-                "term": "connection x idea interaction",
-                "coefficient": round(b, 4),
-                "std_error": round(se, 4),
-                "p_value": round(p, 4),
-                "significant_at_5pct": "yes" if p < 0.05 else "no (additive)",
-                "n": int(res.nobs),
-            })
+        cols = main_cols + ["connection_x_idea"]
+        X = pd.concat([d[cols].astype(float).reset_index(drop=True), fe], axis=1)
+        Xc = sm.add_constant(X, has_constant="add")
+        res = sm.OLS(y, Xc.astype(float)).fit(
+            cov_type="cluster",
+            cov_kwds={"groups":
+                      d["author_cluster_id"].reset_index(drop=True)})
+        b = res.params["connection_x_idea"]
+        se = res.bse["connection_x_idea"]
+        p = res.pvalues["connection_x_idea"]
+        rows.append({
+            "outcome": outcome_label,
+            "term": "connection x idea interaction",
+            "coefficient": round(b, 4),
+            "std_error": round(se, 4),
+            "p_value": round(p, 4),
+            "significant_at_5pct": "yes" if p < 0.05 else "no (additive)",
+            "n": int(res.nobs),
+        })
     return pd.DataFrame(rows)
 
 

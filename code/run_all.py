@@ -3,8 +3,8 @@
 This executes every analysis script as a separate process (so each runs with a
 clean state) and stops if any of them fails. After it finishes, every table in
 tables/ and every figure in figures/ will have been regenerated from the data
-in data/. The figure step runs last because it draws from the tables the
-earlier steps produce.
+in data/. Steps 01-06 are independent of one another; only 07 depends on the
+tables they write, so it must stay last in STEPS.
 
     python3 run_all.py
 """
