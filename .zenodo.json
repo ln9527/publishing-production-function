@@ -1,0 +1,28 @@
+{
+  "title": "Replication package: Merit or networks? What decides where research is published",
+  "upload_type": "software",
+  "description": "De-identified data and code that reproduce every table and figure in 'Merit or networks? What decides where research is published'. The package estimates a five-input production function for journal placement (text-legible idea quality, execution quality, connections, author ability, and an off-the-shelf language-model score) over 6,208 NBER working papers circulated 2010-2015. Each row is keyed by the public NBER working-paper identifier and carries only numeric derived measures, scores, and outcomes; author and editor identities are withheld for privacy and can be rebuilt independently from the public sources documented in DATA_AVAILABILITY.md.",
+  "creators": [
+    {
+      "name": "Li, Ning",
+      "affiliation": "Tsinghua University"
+    }
+  ],
+  "license": "MIT",
+  "keywords": [
+    "economics of science",
+    "peer review",
+    "scientific publishing",
+    "editorial favoritism",
+    "large language models",
+    "science of science",
+    "replication package"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/ln9527/publishing-production-function",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}
